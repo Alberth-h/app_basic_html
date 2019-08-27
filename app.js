@@ -1,11 +1,11 @@
 const buttons = document.querySelectorAll('button');
 
 const playnote = event =>{
-    console.log(event.target.dataset.note);
-    alert('Arriba España!!!');
+    const button = event.target;
     const note = button.dataset.note;
-    console.log(`audio${note}`);
-    const audio = document.getElementById(`audio${note}`);
+    const audioId = `audio${note}`;
+    console.log(audioId);
+    const audio = document.getElementById(audioId);
     audio.pause();
     audio.currentTime = 0;
     audio.play();
