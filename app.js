@@ -4,7 +4,7 @@ const playnote = event =>{
     const button = event.target;
     const note = button.dataset.note;
     const audioId = `audio${note}`;
-    console.log(audioId);
+    // console.log(audioId);
     const audio = document.getElementById(audioId);
     audio.pause();
     audio.currentTime = 0;
@@ -20,7 +20,7 @@ const keyNoteDown = event =>{
     const key = event.key;
     console.log(key);
     const button = document.querySelector(`button[data-key="${key}"]`)
-    if(button)button.click();
+    if(button) button.click();
 
 }
 
